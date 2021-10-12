@@ -1,9 +1,9 @@
 # Project Cordova 2021 - 2022
 
-- **Name**: ......
-- **Class**: (2APPAI 01, 2APPAI 02, 2ACS, 2WT, 3IoT)
-- **Email**: <a href="mailto:demo@example.com">demo@example.com</a>
-- **Student number**: ......
+- **Name**: Luca Van Genechten
+- **Class**: 2APPAI 01
+- **Email**: <a href="mailto:r0849476@student.thomasmore.be">r0849476@student.thomasmore.be</a>
+- **Student number**: r0849476
 - **APK download URL**: ......
 
 ![Link to your profile photo](https://cdn.iconscout.com/icon/free/png-256/user-2451533-2082543.png)
