@@ -6,11 +6,19 @@
 - **Student number**: r0849476
 - **APK download URL**: ......
 
-![Link to your profile photo](https://cdn.iconscout.com/icon/free/png-256/user-2451533-2082543.png)
+![Link to your profile photo](Sources/me.jpg)
 
 ## Short description of your app
 
-...............................
+Voor mijn applicatie in Cordova ga ik een mobile versie maken van de wodbook website die Crossfit Lividum in Herentals gebruikt. Het is de bedoeling dat gebruikers zich kunnen inloggen in de app met een gebruikersnaam en een wachtwoord. Deze worden opgeslagen in een databank. 
+
+Na het inloggen krijgt de gebruiker een welkompagina waar hij verwelkomt wordt en informatie krijgt over aankomende evenementen.
+In een volgende tab kunnen ze zich inschrijven voor sportsessies. Hierbij krijgt de gebruiker een overzicht via een kalender waarbij open slots staan waarvoor ze zich kunnen inschrijven. Indien de gebruiker op een tijdblok duwt om zich in te schrijven krijgen ze data te zien zoals de coach, het maximum aantal inschrijvingen en het huidig aantal ingeschreven sporters, alsook de tijdblok (bijvoorbeeld van 10u tot 11u).
+
+In deze tab kan de gebruiker zelf ook een evenement aanmaken voor in de kalender, als de gebruiker daar de rechten voor heeft (bijvoorbeeld als coach).
+In een derde tab krijgen ze hun huidige inschrijvingen te zien. Deze staan chronologisch gerangschikt en wanneer de gebruiker op een inschrijving duwt krijgt deze weer al de data voor die inschrijving te zien.
+
+In een vierde en laatste tab kunnen de gebruikers hun gegevens aanpassen indien ze dit nodig vinden.
 
 ## Plugins used
 
