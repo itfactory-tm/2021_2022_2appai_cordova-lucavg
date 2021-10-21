@@ -5,3 +5,7 @@ $(function(){
 function onDeviceReady() {
     console.log('Device is ready');
 };
+
+$(document).ready(function(){
+    $('.sidenav').sidenav();
+});

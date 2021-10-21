@@ -7,31 +7,35 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="css/materialize.1.0.0.min.css">
     <link rel="stylesheet" href="css/app.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" type="text/javascript"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
     <title>Project Cordova</title>
 </head>
 <body>
-<header class="navbar-fixed">
-    <nav class="grey">
-        <div class="nav-wrapper container">
-            <a href="#!" class="brand-logo center">Project Cordova</a>
+<header>
+    <nav>
+        <div class="nav-wrapper">
+            <a href="#!" class="brand-logo">Ledenlijsten Chiro Vorselaar</a>
+            <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+            <ul class="right hide-on-med-and-down">
+                <li><a href="login.html">Sass</a></li>
+                <li><a href="badges.html">Components</a></li>
+                <li><a href="collapsible.html">Javascript</a></li>
+                <li><a href="mobile.html">Mobile</a></li>
+            </ul>
         </div>
     </nav>
+
+    <ul class="sidenav" id="mobile-demo">
+        <li><a href="login.html">Sass</a></li>
+        <li><a href="badges.html">Components</a></li>
+        <li><a href="collapsible.html">Javascript</a></li>
+        <li><a href="mobile.html">Mobile</a></li>
+    </ul>
 </header>
 <main class="container">
     <div class="row">
-        <p>Custom + overwrite css styles: <b>css/app.css</b></p>
-        <hr>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam dignissimos nihil possimus, quidem
-            recusandae
-            velit! Alias aut deserunt ducimus iusto perspiciatis quam quo repellendus reprehenderit repudiandae
-            similique
-            ut, velit voluptatum!</p>
-        <p>Architecto assumenda consectetur eligendi eveniet facilis impedit in iste, maxime modi molestiae nesciunt non
-            optio praesentium quasi quia rem temporibus totam vitae voluptas voluptate? Amet cum id magnam nostrum
-            quam.</p>
-        <p>Accusantium aliquam consequuntur cumque cupiditate dolore dolorum ea eaque eligendi eos, exercitationem
-            itaque
-            iusto magni maxime minima molestiae molestias neque odio placeat quae, quam quas qui quis sed sunt unde.</p>
+
     </div>
 </main>
 <script src="js/jquery.3.5.1min.js"></script>
