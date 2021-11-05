@@ -1,46 +1,468 @@
 <!doctype html>
 <html lang="nl">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link rel="stylesheet" href="css/materialize.1.0.0.min.css">
-    <link rel="stylesheet" href="css/app.css">
-    <script src="https://code.jquery.com/jquery-3.2.1.min.js" type="text/javascript"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
-    <title>Project Cordova</title>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="css/materialize.1.0.0.min.css">
+  <link rel="stylesheet" href="css/app.css">
+  <link rel="stylesheet" href="css/fontawesome.css">
+  <link rel="stylesheet" href="css/brands.css">
+  <link rel="stylesheet" href="css/solid.css">
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js" type="text/javascript"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+  <script defer src="/www/js/all.js"></script>
+  <title>Project Cordova</title>
 </head>
+
 <body>
-<header>
+  <header>
     <nav>
-        <div class="nav-wrapper">
-            <a href="#!" class="brand-logo">Ledenlijsten Chiro Vorselaar</a>
-            <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-            <ul class="right hide-on-med-and-down">
-                <li><a href="login.html">Sass</a></li>
-                <li><a href="badges.html">Components</a></li>
-                <li><a href="collapsible.html">Javascript</a></li>
-                <li><a href="mobile.html">Mobile</a></li>
-            </ul>
-        </div>
+      <div class="nav-wrapper">
+        <a href="#!" class="brand-logo">Ledenlijsten</a>
+        <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+        <ul class="right hide-on-med-and-down">
+          <li><a href="">About Me</a></li>
+          <li><a href="">Components</a></li>
+          <li><a href="">Javascript</a></li>
+          <li><a href="">Mobile</a></li>
+        </ul>
+      </div>
     </nav>
 
     <ul class="sidenav" id="mobile-demo">
-        <li><a href="login.html">Sass</a></li>
-        <li><a href="badges.html">Components</a></li>
-        <li><a href="collapsible.html">Javascript</a></li>
-        <li><a href="mobile.html">Mobile</a></li>
+      <li><a href="#!" data-show="tabInformation">About me</a></li>
+      <li><a href="#!" data-show="tabLists">ledenlijsten</a></li>
+      <li><a href="#!" data-show="tabPreviousLists">Vorige lijsten</a></li>
+      <li><a href="#!" data-show="tabSettings">Instellingen</a></li>
     </ul>
-</header>
-<main class="container">
-    <div class="row">
+  </header>
+  <main class="container">
+    <div class="row spa" id="tabInformation">
+      <div class="col s12">
+        <h4 class="row disp s12">Over mij:</h4>
+        <div class="row s12">
+          <div class="row">
+            <h5>
+              Naam:
+            </h5>
+            <p>Luca Van Genechten</p>
+            <h5>
+              Studies:
+            </h5>
+            <p>
+              IT Factory App Development
+            </p>
+            <h5>
+              Campus:
+            </h5>
+            <p>
+              Thomas More Geel
+            </p>
+          </div>
+          <div class="photocontainer">
+            <img class="me" src="sources/me.jpg" alt="ikke">
+          </div>
+          <div>
+            <h5>Waarover gaat deze app?</h5>
+            <p>Voor het vak Cordova maakt elke student een applicatie. 
+              Deze specifieke applicatie dient als een tool om ledenlijsten bij te houden voor Chiro Vorselaar.
+              Elke zondag kan de leiding op de applicatie aanduiden welke leden aanwezig zijn en deze ook terug opvragen.
+              Indien u een administratief verantwoordelijke bent van de chiro kan u ook inloggen met uw credentials en verder informatie per lid opvragen.
+            </p>
+          </div>
+        </div>
+      </div>
 
     </div>
-</main>
-<script src="js/jquery.3.5.1min.js"></script>
-<script src="js/materialize.1.0.0.min.js"></script>
-<script src="cordova.js"></script>
-<script defer src="js/app.js"></script>
+    <div class="row spa" id="tabLists">
+      <div>
+        <h4>Zondag 7 November</h4>
+        <form action="#">
+          <p>
+            <label>
+              <input type="checkbox" checked="checked" />
+              <span>Lid 1</span>
+            </label>
+          </p>
+          <p>
+            <label>
+              <input type="checkbox" checked="checked" />
+              <span>Lid 2</span>
+            </label>
+          </p>
+          <p>
+            <label>
+              <input type="checkbox" checked="checked" />
+              <span>Lid 3</span>
+            </label>
+          </p>
+          <p>
+            <label>
+              <input type="checkbox" checked="checked" />
+              <span>Lid 4</span>
+            </label>
+          </p>
+          <p>
+            <label>
+              <input type="checkbox" checked="checked" />
+              <span>Lid 5</span>
+            </label>
+          </p>
+          <p>
+            <label>
+              <input type="checkbox" checked="checked" />
+              <span>Lid 6</span>
+            </label>
+          </p>
+          <p>
+            <label>
+              <input type="checkbox" checked="checked" />
+              <span>Lid 7</span>
+            </label>
+          </p>
+          <p>
+            <label>
+              <input type="checkbox" checked="checked" />
+              <span>Lid 8</span>
+            </label>
+          </p>
+          <p>
+            <label>
+              <input type="checkbox" checked="checked" />
+              <span>Lid 9</span>
+            </label>
+          </p>
+          <p>
+            <label>
+              <input type="checkbox" checked="checked" />
+              <span>Lid 10</span>
+            </label>
+          </p>
+          <p>
+            <label>
+              <input type="checkbox" checked="checked" />
+              <span>Lid 11</span>
+            </label>
+          </p>
+          <p>
+            <label>
+              <input type="checkbox" checked="checked" />
+              <span>Lid 12</span>
+            </label>
+          </p>
+          <p>
+            <label>
+              <input type="checkbox" checked="checked" />
+              <span>Lid 13</span>
+            </label>
+          </p>
+          <p>
+            <label>
+              <input type="checkbox" checked="checked" />
+              <span>Lid 14</span>
+            </label>
+          </p>
+          <p>
+            <label>
+              <input type="checkbox" checked="checked" />
+              <span>Lid 15</span>
+            </label>
+          </p>
+          <p>
+            <label>
+              <input type="checkbox" checked="checked" />
+              <span>Lid 16</span>
+            </label>
+          </p>
+          <p>
+            <label>
+              <input type="checkbox" checked="checked" />
+              <span>Lid 17</span>
+            </label>
+          </p>
+          <p>
+            <label>
+              <input type="checkbox" checked="checked" />
+              <span>Lid 18</span>
+            </label>
+          </p>
+          <p>
+            <label>
+              <input type="checkbox" checked="checked" />
+              <span>Lid 19</span>
+            </label>
+          </p>
+          <p>
+            <label>
+              <input type="checkbox" checked="checked" />
+              <span>Lid 20</span>
+            </label>
+          </p>
+          <p>
+            <label>
+              <input type="checkbox" checked="checked" />
+              <span>Lid 21</span>
+            </label>
+          </p>
+          <p>
+            <label>
+              <input type="checkbox" checked="checked" />
+              <span>Lid 22</span>
+            </label>
+          </p>
+          <p>
+            <label>
+              <input type="checkbox" checked="checked" />
+              <span>Lid 23</span>
+            </label>
+          </p>
+          <p>
+            <label>
+              <input type="checkbox" checked="checked" />
+              <span>Lid 24</span>
+            </label>
+          </p>
+          <p>
+            <label>
+              <input type="checkbox" checked="checked" />
+              <span>Lid 25</span>
+            </label>
+          </p>
+          <p>
+            <label>
+              <input type="checkbox" checked="checked" />
+              <span>Lid 26</span>
+            </label>
+          </p>
+          <p>
+            <label>
+              <input type="checkbox" checked="checked" />
+              <span>Lid 27</span>
+            </label>
+          </p>
+        </form>
+      </div>
+    </div>
+    <div class="row spa" id="tabPreviousLists">
+      <div>
+        <div class="disp">
+          <i class="fas fa-arrow-left fa-2x center-vertically"></i>
+          <h4 class="center-vertically">Zondag 31 October</h4>
+          <i class="fas fa-arrow-right fa-2x center-vertically>"></i>
+        </div>
+        <form action="#">
+          <p>
+            <label>
+              <input type="checkbox" checked="checked" />
+              <span>Lid 1</span>
+            </label>
+          </p>
+          <p>
+            <label>
+              <input type="checkbox" checked="checked" />
+              <span>Lid 2</span>
+            </label>
+          </p>
+          <p>
+            <label>
+              <input type="checkbox" checked="checked" />
+              <span>Lid 3</span>
+            </label>
+          </p>
+          <p>
+            <label>
+              <input type="checkbox" checked="checked" />
+              <span>Lid 4</span>
+            </label>
+          </p>
+          <p>
+            <label>
+              <input type="checkbox" checked="checked" />
+              <span>Lid 5</span>
+            </label>
+          </p>
+          <p>
+            <label>
+              <input type="checkbox" checked="checked" />
+              <span>Lid 6</span>
+            </label>
+          </p>
+          <p>
+            <label>
+              <input type="checkbox" checked="checked" />
+              <span>Lid 7</span>
+            </label>
+          </p>
+          <p>
+            <label>
+              <input type="checkbox" checked="checked" />
+              <span>Lid 8</span>
+            </label>
+          </p>
+          <p>
+            <label>
+              <input type="checkbox" checked="checked" />
+              <span>Lid 9</span>
+            </label>
+          </p>
+          <p>
+            <label>
+              <input type="checkbox" checked="checked" />
+              <span>Lid 10</span>
+            </label>
+          </p>
+          <p>
+            <label>
+              <input type="checkbox" checked="checked" />
+              <span>Lid 11</span>
+            </label>
+          </p>
+          <p>
+            <label>
+              <input type="checkbox" checked="checked" />
+              <span>Lid 12</span>
+            </label>
+          </p>
+          <p>
+            <label>
+              <input type="checkbox" checked="checked" />
+              <span>Lid 13</span>
+            </label>
+          </p>
+          <p>
+            <label>
+              <input type="checkbox" checked="checked" />
+              <span>Lid 14</span>
+            </label>
+          </p>
+          <p>
+            <label>
+              <input type="checkbox" checked="checked" />
+              <span>Lid 15</span>
+            </label>
+          </p>
+          <p>
+            <label>
+              <input type="checkbox" checked="checked" />
+              <span>Lid 16</span>
+            </label>
+          </p>
+          <p>
+            <label>
+              <input type="checkbox" checked="checked" />
+              <span>Lid 17</span>
+            </label>
+          </p>
+          <p>
+            <label>
+              <input type="checkbox" checked="checked" />
+              <span>Lid 18</span>
+            </label>
+          </p>
+          <p>
+            <label>
+              <input type="checkbox" checked="checked" />
+              <span>Lid 19</span>
+            </label>
+          </p>
+          <p>
+            <label>
+              <input type="checkbox" checked="checked" />
+              <span>Lid 20</span>
+            </label>
+          </p>
+          <p>
+            <label>
+              <input type="checkbox" checked="checked" />
+              <span>Lid 21</span>
+            </label>
+          </p>
+          <p>
+            <label>
+              <input type="checkbox" checked="checked" />
+              <span>Lid 22</span>
+            </label>
+          </p>
+          <p>
+            <label>
+              <input type="checkbox" checked="checked" />
+              <span>Lid 23</span>
+            </label>
+          </p>
+          <p>
+            <label>
+              <input type="checkbox" checked="checked" />
+              <span>Lid 24</span>
+            </label>
+          </p>
+          <p>
+            <label>
+              <input type="checkbox" checked="checked" />
+              <span>Lid 25</span>
+            </label>
+          </p>
+          <p>
+            <label>
+              <input type="checkbox" checked="checked" />
+              <span>Lid 26</span>
+            </label>
+          </p>
+          <p>
+            <label>
+              <input type="checkbox" checked="checked" />
+              <span>Lid 27</span>
+            </label>
+          </p>
+        </form>
+      </div>
+    </div>
+    <div class="row spa" id="tabSettings">
+      <div>
+        <h4>Instellingen:</h4>
+        <form action="#">
+          <label class="settingsLabel" for="afdeling">Afdeling:</label>
+          <select name="afdelingSelect" id="afdeling" class="show">
+            <option value="0" selected></option>
+            <option value="1">Sloeber</option>
+            <option value="2">Speelclub</option>
+            <option value="3">Rakwi</option>
+            <option value="4">Tito</option>
+            <option value="5">Keti</option>
+            <option value="6">Aspi</option>
+          </select>
+          <h5>Adreslijsten:</h5>
+          <p>
+            <label>
+              <input type="checkbox" />
+              <span>Adreslijsten tonen?</span>
+            </label>
+          </p>
+          <label for="loginForm" class="settingsLabel">Log in voor adreslijsten</label>
+          <div id="loginForm" class='input-field'>
+            <input class='validate' type='email' name='email' id='email' />
+            <label for='email'>Gelieve uw email-adres in te vullen</label>
+          </div>
+          <div class='input-field'>
+            <input class='validate' type='password' name='password' id='password' />
+            <label for='password'>Gelieve uw wachtwoord in te vullen</label>
+          </div>
+          <a href="main.html" class='col s12 btn waves-effect waves-light btn btn-large m-md indigo'>Login</a>
+          <div>
+            <label>
+              <h6><a class="grey-text lighten-4 forgotpassword" href="main.html">Wachtwoord vergeten?</a></h6>
+            </label>
+          </div>
+        </form>
+      </div>
+    </div>
+  </main>
+  <script src="js/jquery.3.5.1min.js"></script>
+  <script src="js/materialize.1.0.0.min.js"></script>
+  <script src="cordova.js"></script>
+  <script defer src="js/app.js"></script>
 </body>
+
 </html>

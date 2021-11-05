@@ -1,7 +1,62 @@
 a.brand-logo {
-    font-size: 1.2rem;
+    font-size: 1.6rem;
+    margin: 25;
 }
 
 p {
     text-align: justify;
+}
+
+.disp {
+    margin: 15px;
+    display: flex;
+  justify-content: space-evenly;
+  height: 50px;
+  position: relative;
+  }
+
+.photocontainer {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.me {
+    height: 200px;
+}
+  
+.center-vertically {
+  margin: 0;
+  position: relative;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.nav-wrapper {
+    background-color: #DD052C;
+}
+
+.spa { display: none;}
+        #tabDevice {display: block;}
+        #compassView {
+            position: relative;
+            text-align: center;
+        }
+
+        #compassImg {
+            position: relative;
+            top: -22px;
+            left: 0;
+        }
+.settingsLabel {
+    font-size: larger;
+    color: black;
+}
+
+.show {
+    display: block;
+}
+
+.show option {
+    font-size: larger;
 }
