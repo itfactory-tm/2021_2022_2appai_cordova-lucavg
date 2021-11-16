@@ -1,3 +1,14 @@
+import require from "require";
+
+function component() {
+	const element = document.createElement('div');
+	element.innerHTML = _.join(['Hello', 'webpack'], '');
+
+	return element;
+}
+
+document.body.appendChild(component());
+
 $(function () {
     document.addEventListener("deviceready", onDeviceReady, false);
 
@@ -24,9 +35,7 @@ const CiviCRM = function () {
 		api_key:'BUNEULKF7Z9SufJbeGnni0Jn'
 	  };
 	
-	var crmAPI = require(['civicrm']);
-
-	(config);
+	var crmAPI = require('civicrm.js')(config);
 
 	crmAPI.get ('contact',{contact_type:'Individual',return:'display_name,email,phone'},
 		function (result) {

@@ -3,10 +3,10 @@
   "displayName": "ProjectCordova",
   "version": "1.0.0",
   "description": "A sample Apache Cordova application that responds to the deviceready event.",
-  "main": "index.js",
+  "private": true,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack"
+    "build": "webpack --config webpack.config.js"
   },
   "keywords": [
     "ecosystem:cordova"
@@ -33,6 +33,7 @@
     "@fortawesome/fontawesome-free": "^5.15.4",
     "browserify": "^17.0.0",
     "civicrm": "^2.2.2",
+    "lodash": "^4.17.21",
     "require": "^2.4.20",
     "requirejs": "^2.3.6"
   }
