@@ -1,10 +1,10 @@
 const path = require('path')
 
 module.exports = {
-    mode: 'development',
+    mode: 'none',
     entry: './www/js/app.js',
     output: {
-        path: path.resolve(__dirname, './www/js'),
+        path: path.resolve(__dirname, './www/js/'),
         filename: 'app.bundle.js',
     },
     node: {
