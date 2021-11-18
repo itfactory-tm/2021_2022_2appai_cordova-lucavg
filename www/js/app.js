@@ -58,7 +58,7 @@ const docRef = db.collection('Members').doc('member3');
 })();
 
 (async () => {
-	const snapshot = await db.collection('users').get();
+	const snapshot = await db.collection('Members').get();
 	snapshot.forEach((doc) => {
 		console.log(doc.id, '=>', doc.data());
 	});
