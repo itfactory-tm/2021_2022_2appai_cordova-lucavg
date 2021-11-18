@@ -52,7 +52,7 @@ function onDeviceReady() {
 	});
 };
 
-jquery(function () {
+$(function () {
 	document.addEventListener("deviceready", onDeviceReady, false);
 
 	$('.sidenav').sidenav();
@@ -65,7 +65,7 @@ jquery(function () {
 	$('.tabInformation').show();
 });
 
-jquery(document).ready(function () {
+$(document).ready(function () {
 	$('.sidenav').sidenav();
 
 });
