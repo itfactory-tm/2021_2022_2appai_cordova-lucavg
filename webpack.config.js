@@ -1,12 +1,18 @@
 const path = require('path')
 
 module.exports = {
-    entry:{
-        main: path.resolve(__dirname, 'www/js/app.js'),
-    },
-
+    mode: 'development',
+    entry: './www/js/app.js',
     output: {
-        path: path.resolve(__dirname, 'www/js/'),
-        filename: 'main.js',
+        path: path.resolve(__dirname, './www/js'),
+        filename: 'app.bundle.js',
     },
+    node: {
+        child_process: 'empty',
+        fs: 'empty',
+        crypto: 'empty',
+        net: 'empty',
+        tls: 'empty'
+      },
+    devtool: 'inline-source-map',
 };
