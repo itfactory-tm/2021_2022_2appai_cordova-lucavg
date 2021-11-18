@@ -33,7 +33,6 @@
     "browserify": "^17.0.0",
     "civicrm": "^2.2.2",
     "compare-func": "^2.0.0",
-    "cordova-android": "^8.1.0",
     "cordova-plugin-firestore": "4.1.1",
     "firebase": "^9.4.1",
     "firebase-admin": "^10.0.0",
