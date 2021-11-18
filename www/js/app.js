@@ -32,14 +32,14 @@ initializeApp({
 	databaseURL: 'https://ledenlijst-chiro.firebaseapp.com'
 });
 
-//const serviceAccount = require('./serviceAccount.json');
-const serviceAccount = {};
+const serviceAccount = require('./serviceAccount');
+/*const serviceAccount = {};
 fs.readFile('./serviceAccount.json', 'utf-8', (err, data) => {
   if (err) throw err
 
   serviceAccount = JSON.parse(data)
 })
-console.log(serviceAccount);
+console.log(serviceAccount);*/
 
 initializeApp({
 	credential: cert(serviceAccount)
