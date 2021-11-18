@@ -1,4 +1,5 @@
 {
+  "type": "module",
   "name": "be.yourname.plugins",
   "displayName": "ProjectCordova",
   "version": "1.0.0",

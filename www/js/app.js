@@ -18,17 +18,37 @@ import {
 	initializeApp,
 	applicationDefault,
 	cert
-} from '../../node_modules/firebase-admin/app';
+} from '../../node_modules/firebase-admin/lib/app/index.js';
 import {
 	getFirestore,
 	Timestamp,
 	FieldValue
-} from '../../node_modules/firebase-admin/firestore';
+} from '../../node_modules/firebase-admin/lib/firestore/index.js';
 
+initializeApp({
+	credential: applicationDefault(),
+	databaseURL: 'https://ledenlijst-chiro.firebaseapp.com'
+});
 
+const docRef = db.collection('Members').doc('member3');
 
-function onDeviceReady() {
-	/*const firebaseConfig = {
+(async () => {
+	await docRef.set({
+		Name: 'Luca Van Genechten',
+		Street: 'Berkenlaan 9',
+		City: 'Vorselaar'
+	})
+})();
+
+(async () => {
+	const snapshot = await db.collection('users').get();
+	snapshot.forEach((doc) => {
+		console.log(doc.id, '=>', doc.data());
+	});
+});
+
+/*function onDeviceReady() {
+	const firebaseConfig = {
 		apiKey: "AIzaSyD-NuJva4GTL_2_w81wdwhJDEgXhLWVrko",
 		authDomain: "ledenlijst-chiro.firebaseapp.com",
 		projectId: "ledenlijst-chiro",
@@ -44,16 +64,16 @@ function onDeviceReady() {
 		projectId: 'ledenlijst-chiro'
 	});*/
 
-	const serviceAccount = require('./serviceAccount.json');
+	/*const serviceAccount = require('./serviceAccount.json');
 
 	initializeApp({
 		credential: cert(serviceAccount)
 	});
 
 	const db = getFirestore();
-};
+};*/
 
-$(function () {
+/*$(function () {
 	document.addEventListener("deviceready", onDeviceReady, false);
 
 	$('.sidenav').sidenav();
@@ -91,4 +111,4 @@ $(function () {
 $(document).ready(function () {
 	$('.sidenav').sidenav();
 
-});
+});*/
