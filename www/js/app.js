@@ -33,7 +33,7 @@ initializeApp({
 });
 
 //const serviceAccount = require('./serviceAccount.json');
-let serviceAccount = {};
+const serviceAccount = {};
 fs.readFile('./serviceAccount.json', 'utf-8', (err, data) => {
   if (err) throw err
 
