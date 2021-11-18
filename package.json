@@ -41,6 +41,8 @@
     "firebase": "^9.4.1",
     "firebase-admin": "^10.0.0",
     "fs": "0.0.1-security",
+    "jquery": "^3.6.0",
+    "jsdom": "^18.1.0",
     "lists": "^0.2.15",
     "lodash": "^4.17.21",
     "require": "^2.4.20",

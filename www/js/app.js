@@ -8,10 +8,8 @@ import {
 	Timestamp,
 	FieldValue
 } from '../../node_modules/firebase-admin/lib/firestore/index.js';
-import fs from 'fs'
 
-import * as $ from './jquery.3.5.1min.js'
-
+import $ from 'jquery';
 import serviceAccount from './serviceAccount.json'
 
 function onDeviceReady() {
