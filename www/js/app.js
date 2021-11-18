@@ -1,20 +1,3 @@
-/*import {
-	initializeApp,
-	credential as _credential,
-	firestore
-} from "firebase-admin";
-
-import serviceAccount from "./serviceAccount.json";
-
-const db = firestore();
-let memberRef = db.collection("Members");
-memberRef.get().then((QuerySnapshot) => {
-	QuerySnapshot.forEach(document => {
-		console.log(document.data());
-	})
-})*/
-
-
 import {
 	initializeApp,
 	applicationDefault,
@@ -27,45 +10,10 @@ import {
 } from '../../node_modules/firebase-admin/lib/firestore/index.js';
 import fs from 'fs'
 
-/*initializeApp({
-	credential: applicationDefault(),
-	databaseURL: 'https://ledenlijst-chiro.firebaseapp.com'
-});*/
-
 import serviceAccount from './serviceAccount.json'
-/*const serviceAccount = {};
-fs.readFile('./serviceAccount.json', 'utf-8', (err, data) => {
-  if (err) throw err
 
-  serviceAccount = JSON.parse(data)
-})
-console.log(serviceAccount);*/
-
-initializeApp({
-	credential: cert(serviceAccount)
-});
-
-const db = getFirestore();
-
-const docRef = db.collection('Members').doc('member3');
-
-(async () => {
-	await docRef.set({
-		Name: 'Luca Van Genechten',
-		Street: 'Berkenlaan 9',
-		City: 'Vorselaar'
-	})
-})();
-
-(async () => {
-	const snapshot = await db.collection('Members').get();
-	snapshot.forEach((doc) => {
-		console.log(doc.id, '=>', doc.data());
-	});
-});
-
-/*function onDeviceReady() {
-	const firebaseConfig = {
+function onDeviceReady() {
+	/*const firebaseConfig = {
 		apiKey: "AIzaSyD-NuJva4GTL_2_w81wdwhJDEgXhLWVrko",
 		authDomain: "ledenlijst-chiro.firebaseapp.com",
 		projectId: "ledenlijst-chiro",
@@ -87,10 +35,24 @@ const docRef = db.collection('Members').doc('member3');
 		credential: cert(serviceAccount)
 	});
 
+	const db = getFirestore();*/
+	initializeApp({
+		credential: cert(serviceAccount)
+	});
+	
 	const db = getFirestore();
-};*/
+	
+	const docRef = db.collection('Members').doc('member3');
+	
+	(async () => {
+		const snapshot = await db.collection('Members').get();
+		snapshot.forEach((doc) => {
+			console.log(doc.id, '=>', doc.data());
+		});
+	});
+};
 
-/*$(function () {
+$(function () {
 	document.addEventListener("deviceready", onDeviceReady, false);
 
 	$('.sidenav').sidenav();
@@ -101,31 +63,9 @@ const docRef = db.collection('Members').doc('member3');
 		$('.sidenav').sidenav('close');
 	});
 	$('.tabInformation').show();
-
-	initializeApp({
-		credential: applicationDefault(),
-		databaseURL: 'https://ledenlijst-chiro.firebaseapp.com'
-	});
-
-	const docRef = db.collection('Members').doc('member3');
-
-	(async () => {
-		await docRef.set({
-			Name: 'Luca Van Genechten',
-			Street: 'Berkenlaan 9',
-			City: 'Vorselaar'
-		})
-	})();
-
-	(async () => {
-		const snapshot = await db.collection('users').get();
-		snapshot.forEach((doc) => {
-			console.log(doc.id, '=>', doc.data());
-		});
-	});
 });
 
 $(document).ready(function () {
 	$('.sidenav').sidenav();
 
-});*/
+});
