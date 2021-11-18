@@ -32,7 +32,7 @@ initializeApp({
 	databaseURL: 'https://ledenlijst-chiro.firebaseapp.com'
 });
 
-const serviceAccount = require('./serviceAccount');
+import serviceAccount from './serviceAccount'
 /*const serviceAccount = {};
 fs.readFile('./serviceAccount.json', 'utf-8', (err, data) => {
   if (err) throw err
