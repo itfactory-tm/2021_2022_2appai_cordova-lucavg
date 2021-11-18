@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="be.yourName.plugins" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-    <name>ProjectCordova</name>
+<widget id="be.lucvg.plugins" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>Ledenlijsten Chiro Vorselaar</name>
     <description>
-        A sample Apache Cordova application that responds to the deviceready event.
+        An application which serves to create lists for every member of chiro vorselaar, divided in their respective departments.   
     </description>
-    <author email="dev@cordova.apache.org" href="http://cordova.io">
-        Apache Cordova Team
+    <author email="r0849476@student.thomasmore.be" href="https://ledenlijstchirovorselaar.sinners.be/">
+        Luca Van Genechten
     </author>
     <content src="index.html" />
     <access origin="*" />

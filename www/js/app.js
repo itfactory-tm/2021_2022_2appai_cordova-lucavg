@@ -1,4 +1,4 @@
-import {
+/*import {
 	initializeApp,
 	applicationDefault,
 	cert
@@ -9,12 +9,35 @@ import {
 	FieldValue
 } from '../../node_modules/firebase-admin/lib/firestore/index.js';
 
-import $ from './jquery';
 import serviceAccount from './serviceAccount.json'
+*/
 
-console.log('Device is ready');
+import MyImage from '../../resources/me.jpg';
+
+$(function () {
+	document.addEventListener("deviceready", onDeviceReady, false);
+
+	$("#me").attr("src",MyImage);
+
+	$('.sidenav').sidenav();
+
+	$('.sidenav a').on('click', function() {
+		$('.spa').hide();
+		$('#' + $(this).data('show')).show();
+		$('.sidenav').sidenav('close');
+	});
+	$('.tabInformation').show();
+});
+
+$(document).on('load', function() {
+	$('.sidenav').sidenav();
+
+});
 
 function onDeviceReady() {
+
+	console.log('Device is ready');
+	/*
 	initializeApp({
 		credential: cert(serviceAccount)
 	});
@@ -28,24 +51,6 @@ function onDeviceReady() {
 		snapshot.forEach((doc) => {
 			console.log(doc.id, '=>', doc.data());
 		});
-	});
-
+	});	
+	*/
 };
-
-$(function () {
-	document.addEventListener("deviceready", onDeviceReady, false);
-
-	$('.sidenav').sidenav();
-
-	$('.sidenav a').click(function () {
-		$('.spa').hide();
-		$('#' + $(this).data('show')).show();
-		$('.sidenav').sidenav('close');
-	});
-	$('.tabInformation').show();
-});
-
-$(document).ready(function () {
-	$('.sidenav').sidenav();
-
-});
