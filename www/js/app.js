@@ -39,6 +39,7 @@ fs.readFile('./serviceAccount.json', 'utf-8', (err, data) => {
 
   serviceAccount = JSON.parse(data)
 })
+console.log(serviceAccount);
 
 initializeApp({
 	credential: cert(serviceAccount)
