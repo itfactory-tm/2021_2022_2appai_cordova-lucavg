@@ -30,6 +30,14 @@ initializeApp({
 	databaseURL: 'https://ledenlijst-chiro.firebaseapp.com'
 });
 
+const serviceAccount = require('./serviceAccount.json');
+
+	initializeApp({
+		credential: cert(serviceAccount)
+	});
+
+	const db = getFirestore();
+
 const docRef = db.collection('Members').doc('member3');
 
 (async () => {
@@ -62,9 +70,9 @@ const docRef = db.collection('Members').doc('member3');
 		apiKey: 'AIzaSyD-NuJva4GTL_2_w81wdwhJDEgXhLWVrko',
 		authDomain: 'ledenlijst-chiro.firebaseapp.com',
 		projectId: 'ledenlijst-chiro'
-	});*/
+	});
 
-	/*const serviceAccount = require('./serviceAccount.json');
+	const serviceAccount = require('./serviceAccount.json');
 
 	initializeApp({
 		credential: cert(serviceAccount)
