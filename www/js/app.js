@@ -33,12 +33,12 @@ initializeApp({
 });
 
 //const serviceAccount = require('./serviceAccount.json');
-let serviceAccount = require('./serviceAccount.json');
-/*fs.readFile('./serviceAccount.json', (err, data) => {
-	if (err) throw err;
-	serviceAccount = JSON.parse(data);
-	console.log(student);
-});*/
+let serviceAccount = {}
+fs.readFile('./serviceAccount.json', 'utf-8', (err, data) => {
+  if (err) throw err
+
+  serviceAccount = JSON.parse(data)
+})
 
 initializeApp({
 	credential: cert(serviceAccount)
