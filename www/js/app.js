@@ -14,9 +14,7 @@ memberRef.get().then((QuerySnapshot) => {
 	})
 })*/
 
-'use strict';
 
-const fs = require('fs');
 import {
 	initializeApp,
 	applicationDefault,
@@ -27,6 +25,7 @@ import {
 	Timestamp,
 	FieldValue
 } from '../../node_modules/firebase-admin/lib/firestore/index.js';
+import fs from 'fs'
 
 initializeApp({
 	credential: applicationDefault(),
@@ -34,11 +33,12 @@ initializeApp({
 });
 
 //const serviceAccount = require('./serviceAccount.json');
-fs.readFile('./serviceAccount.json', (err, data) => {
+let serviceAccount = require('./serviceAccount.json');
+/*fs.readFile('./serviceAccount.json', (err, data) => {
 	if (err) throw err;
-	const serviceAccount = JSON.parse(data);
+	serviceAccount = JSON.parse(data);
 	console.log(student);
-});
+});*/
 
 initializeApp({
 	credential: cert(serviceAccount)
