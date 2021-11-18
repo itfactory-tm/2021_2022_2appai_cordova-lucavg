@@ -1,6 +1,6 @@
 const path = require('path')
 
-module.exports = {
+/*module.exports = {
     mode: 'none',
     entry: path.resolve(__dirname, 'www') + '/js/app.js',
     target: 'node',
@@ -15,5 +15,19 @@ module.exports = {
         net: 'empty',
         tls: 'empty'
       },
+    browser: {
+        "fs": false,
+        "path": false,
+        "os": false
+    }
     devtool: 'inline-source-map',
-};
+};*/
+
+module.exports = {
+    entry: './www/app.js',
+    target: 'node',
+    output: {
+        path: path.join(__dirname, './www/js/'),
+        filename: 'app.bundle.js'
+    }
+}
