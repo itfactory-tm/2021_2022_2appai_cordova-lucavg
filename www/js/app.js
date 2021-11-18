@@ -24,20 +24,25 @@ import {
 	Timestamp,
 	FieldValue
 } from '../../node_modules/firebase-admin/lib/firestore/index.js';
-import * as fs from '../../node_modules/fs'
+import * as fs from '../../node_modules/fs-write-stream-atomic/index.js'
 
 initializeApp({
 	credential: applicationDefault(),
 	databaseURL: 'https://ledenlijst-chiro.firebaseapp.com'
 });
 
-const serviceAccount = require('./serviceAccount.json');
+//const serviceAccount = require('./serviceAccount.json');
+fs.readFile('./serviceAccount.json', (err, data) => {
+	if (err) throw err;
+	const serviceAccount = JSON.parse(data);
+	console.log(student);
+});
 
-	initializeApp({
-		credential: cert(serviceAccount)
-	});
+initializeApp({
+	credential: cert(serviceAccount)
+});
 
-	const db = getFirestore();
+const db = getFirestore();
 
 const docRef = db.collection('Members').doc('member3');
 
