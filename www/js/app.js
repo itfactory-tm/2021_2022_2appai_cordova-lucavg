@@ -24,6 +24,7 @@ import {
 	Timestamp,
 	FieldValue
 } from '../../node_modules/firebase-admin/lib/firestore/index.js';
+import * as fs from '../../node_modules/fs'
 
 initializeApp({
 	credential: applicationDefault(),
