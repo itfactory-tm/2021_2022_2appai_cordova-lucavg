@@ -27,10 +27,10 @@ import {
 } from '../../node_modules/firebase-admin/lib/firestore/index.js';
 import fs from 'fs'
 
-initializeApp({
+/*initializeApp({
 	credential: applicationDefault(),
 	databaseURL: 'https://ledenlijst-chiro.firebaseapp.com'
-});
+});*/
 
 import serviceAccount from './serviceAccount.json'
 /*const serviceAccount = {};
