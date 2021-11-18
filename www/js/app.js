@@ -10,6 +10,8 @@ import {
 } from '../../node_modules/firebase-admin/lib/firestore/index.js';
 import fs from 'fs'
 
+import * as $ from './jquery.3.5.1min.js'
+
 import serviceAccount from './serviceAccount.json'
 
 function onDeviceReady() {
@@ -52,7 +54,7 @@ function onDeviceReady() {
 	});
 };
 
-$(function () {
+jquery(function () {
 	document.addEventListener("deviceready", onDeviceReady, false);
 
 	$('.sidenav').sidenav();
@@ -65,7 +67,7 @@ $(function () {
 	$('.tabInformation').show();
 });
 
-$(document).ready(function () {
+jquery(document).ready(function () {
 	$('.sidenav').sidenav();
 
 });
