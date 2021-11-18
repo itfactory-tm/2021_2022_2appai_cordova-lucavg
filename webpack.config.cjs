@@ -1,5 +1,17 @@
 const path = require('path')
 
+module.exports = {
+    entry: path.resolve(__dirname, './www/js/app.js'),
+    target: 'node',
+    output: {
+        path: path.resolve(__dirname, './www/js'),
+        filename: 'app.bundle.js'
+    },
+    devServer: {
+        contentBase: path.resolve(__dirname, './www/js')
+    }
+}
+
 /*module.exports = {
     mode: 'none',
     entry: path.resolve(__dirname, 'www') + '/js/app.js',
@@ -22,12 +34,3 @@ const path = require('path')
     }
     devtool: 'inline-source-map',
 };*/
-
-module.exports = {
-    entry: './www/app.js',
-    target: 'node',
-    output: {
-        path: path.join(__dirname, './www/js/'),
-        filename: 'app.bundle.js'
-    }
-}

@@ -9,7 +9,7 @@ import {
 	FieldValue
 } from '../../node_modules/firebase-admin/lib/firestore/index.js';
 
-import $ from 'jquery';
+import $ from './jquery';
 import serviceAccount from './serviceAccount.json'
 
 function onDeviceReady() {
