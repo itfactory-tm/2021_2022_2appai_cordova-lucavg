@@ -14,6 +14,9 @@ memberRef.get().then((QuerySnapshot) => {
 	})
 })*/
 
+'use strict';
+
+const fs = require('fs');
 import {
 	initializeApp,
 	applicationDefault,
@@ -24,7 +27,6 @@ import {
 	Timestamp,
 	FieldValue
 } from '../../node_modules/firebase-admin/lib/firestore/index.js';
-import * as fs from '../../node_modules/fs-write-stream-atomic/index.js'
 
 initializeApp({
 	credential: applicationDefault(),
