@@ -34,8 +34,8 @@
       "cordova-plugin-androidx": {}
     },
     "platforms": [
-      "android",
-      "browser"
+      "browser",
+      "android"
     ]
   },
   "dependencies": {

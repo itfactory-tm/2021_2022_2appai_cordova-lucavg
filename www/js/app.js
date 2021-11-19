@@ -21,8 +21,8 @@ const firebaseConfig = {
 };
 const app = initializeApp(firebaseConfig);
 const db = getDatabase(app);
-localStorage.setItem('sloeber', afdeling);
-let afdeling = localStorage.getItem('afdeling');
+const Sloebers = "Sloebers";
+localStorage.setItem('afd', Sloebers);
 
 $(function () {
 	document.addEventListener("deviceready", onDeviceReady, false);
@@ -47,17 +47,17 @@ $(function () {
 	$("#btnWrite").on("click", function () {
 		writeMemberData("Luca Van Genechten", "Berkenlaan 9", "Vorselaar", "peepee");
 	});
-	$("#btnGet").on("click", function () {
+	$("#tabLists").on("click", function () {
 		getMemberData();
 	});
 
 	console.log('Device is ready');
 });
 
-function onDeviceReady() {
+function saveAfdeling() {
 
-};
-
+}
+/*
 function writeMemberData(userId, name, email, imageUrl) {
 	set(ref(db, 'users/' + userId), {
 			username: name,
@@ -65,69 +65,28 @@ function writeMemberData(userId, name, email, imageUrl) {
 			profile_picture: imageUrl
 		})
 		.then(() => {
-			// Data saved successfully!
 			console.log("Data saved successfully!")
 		})
 		.catch((error) => {
-			// The write failed...
-			console.log("error");
+			console.log(error);
 		});
 }
-
+*/
 function getMemberData() {
 	const dbRef = ref(getDatabase());
+	const afdeling = localStorage.getItem('afd');
 	get(child(dbRef, 'Members/' + afdeling + '/')).then((snapshot) => {
 		if (snapshot.exists()) {
-			console.log(snapshot.val());
+			// console.log(snapshot.val());
+			snapshot.forEach((child) => {
+				//var formInput = child.key;
+				console.log(child.key);
+			});
 		} else {
 			console.log("No data available");
 		}
 	})
-	.then(() => {
-
-	})
 	.catch((error) => {
 		console.error(error);
 	});
-	/*get(child(db, `users/${userId}`)).then((snapshot) => {
-	  if (snapshot.exists()) {
-		console.log(snapshot.val());
-	  } else {
-		console.log("No data available");
-	  }
-	})
-	.then(() => {
-		console.log(snapshot.username.val);
-	})
-	.catch((error) => {
-	  console.error(error);
-	});*/
 }
-/*
-function writeMemberData(name, street, city) {
-	userId++;
-	set(ref(db, 'Members/' + userId), {
-			name: name,
-			street: street,
-			city: city
-		})
-		.then(() => {
-			console.log("Data written successfully")
-		})
-		.catch((error) => {
-			console.log(error);
-		})
-}
-
-function getMemberData(userId) {
-	get(child(d, `Members/${userId}`)).then((snapshot) => {
-		if (snapshot.exists()) {
-			console.log(snapshot.val());
-		} else {
-			console.log("No data available");
-		}
-	}).catch((error) => {
-		console.error(error);
-	});
-}
-*/

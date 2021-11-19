@@ -6,7 +6,7 @@
 - **Student number**: r0849476
 - **APK download URL**: ......
 
-![Link to your profile photo](Sources/me.jpg)
+![Link to your profile photo](../resources/me.jpg)
 
 ## Short description of your app
 

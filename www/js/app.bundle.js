@@ -25100,6 +25100,21 @@ function getModularInstance(service) {
 
 /***/ }),
 
+/***/ "./resources/me.jpg":
+/*!**************************!*\
+  !*** ./resources/me.jpg ***!
+  \**************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "feba14b73200dc9b0697d465371fa6b2.jpg");
+
+/***/ }),
+
 /***/ "./node_modules/firebase/app/dist/index.esm.js":
 /*!*****************************************************!*\
   !*** ./node_modules/firebase/app/dist/index.esm.js ***!
@@ -27543,6 +27558,26 @@ function setUserLogHandler(logCallback, options) {
 /******/ 		};
 /******/ 	})();
 /******/ 	
+/******/ 	/* webpack/runtime/publicPath */
+/******/ 	(() => {
+/******/ 		var scriptUrl;
+/******/ 		if (__webpack_require__.g.importScripts) scriptUrl = __webpack_require__.g.location + "";
+/******/ 		var document = __webpack_require__.g.document;
+/******/ 		if (!scriptUrl && document) {
+/******/ 			if (document.currentScript)
+/******/ 				scriptUrl = document.currentScript.src
+/******/ 			if (!scriptUrl) {
+/******/ 				var scripts = document.getElementsByTagName("script");
+/******/ 				if(scripts.length) scriptUrl = scripts[scripts.length - 1].src
+/******/ 			}
+/******/ 		}
+/******/ 		// When supporting browsers where an automatic publicPath is not supported you must specify an output.publicPath manually via configuration
+/******/ 		// or pass an empty string ("") and set the __webpack_public_path__ variable from your code to use your own logic.
+/******/ 		if (!scriptUrl) throw new Error("Automatic publicPath is not supported in this browser");
+/******/ 		scriptUrl = scriptUrl.replace(/#.*$/, "").replace(/\?.*$/, "").replace(/\/[^\/]+$/, "/");
+/******/ 		__webpack_require__.p = scriptUrl;
+/******/ 	})();
+/******/ 	
 /************************************************************************/
 var __webpack_exports__ = {};
 // This entry need to be wrapped in an IIFE because it need to be in strict mode.
@@ -27573,7 +27608,7 @@ _global["default"]._babelPolyfill = true;
   !*** ./www/js/app.js ***!
   \***********************/
 __webpack_require__.r(__webpack_exports__);
-Object(function webpackMissingModule() { var e = new Error("Cannot find module '../../resources/me.jpg'"); e.code = 'MODULE_NOT_FOUND'; throw e; }());
+/* harmony import */ var _resources_me_jpg__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../resources/me.jpg */ "./resources/me.jpg");
 /* harmony import */ var firebase_app__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! firebase/app */ "./node_modules/firebase/app/dist/index.esm.js");
 /* harmony import */ var firebase_database__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! firebase/database */ "./node_modules/firebase/database/dist/index.esm.js");
 
@@ -27590,13 +27625,13 @@ const firebaseConfig = {
 };
 const app = (0,firebase_app__WEBPACK_IMPORTED_MODULE_1__.initializeApp)(firebaseConfig);
 const db = (0,firebase_database__WEBPACK_IMPORTED_MODULE_2__.getDatabase)(app);
-localStorage.setItem('sloeber', afdeling);
-let afdeling = localStorage.getItem('afdeling');
+const Sloebers = "Sloebers";
+localStorage.setItem('afd', Sloebers);
 
 $(function () {
 	document.addEventListener("deviceready", onDeviceReady, false);
 
-	$("#me").attr("src", Object(function webpackMissingModule() { var e = new Error("Cannot find module '../../resources/me.jpg'"); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
+	$("#me").attr("src", _resources_me_jpg__WEBPACK_IMPORTED_MODULE_0__["default"]);
 
 	$('.sidenav').sidenav();
 
@@ -27616,90 +27651,49 @@ $(function () {
 	$("#btnWrite").on("click", function () {
 		writeMemberData("Luca Van Genechten", "Berkenlaan 9", "Vorselaar", "peepee");
 	});
-	$("#btnGet").on("click", function () {
+	$("#tabLists").on("click", function () {
 		getMemberData();
 	});
 
 	console.log('Device is ready');
 });
 
-function onDeviceReady() {
+function saveAfdeling() {
 
-};
-
+}
+/*
 function writeMemberData(userId, name, email, imageUrl) {
-	(0,firebase_database__WEBPACK_IMPORTED_MODULE_2__.set)((0,firebase_database__WEBPACK_IMPORTED_MODULE_2__.ref)(db, 'users/' + userId), {
+	set(ref(db, 'users/' + userId), {
 			username: name,
 			email: email,
 			profile_picture: imageUrl
 		})
 		.then(() => {
-			// Data saved successfully!
 			console.log("Data saved successfully!")
 		})
 		.catch((error) => {
-			// The write failed...
-			console.log("error");
+			console.log(error);
 		});
 }
-
+*/
 function getMemberData() {
 	const dbRef = (0,firebase_database__WEBPACK_IMPORTED_MODULE_2__.ref)((0,firebase_database__WEBPACK_IMPORTED_MODULE_2__.getDatabase)());
+	const afdeling = localStorage.getItem('afd');
 	(0,firebase_database__WEBPACK_IMPORTED_MODULE_2__.get)((0,firebase_database__WEBPACK_IMPORTED_MODULE_2__.child)(dbRef, 'Members/' + afdeling + '/')).then((snapshot) => {
 		if (snapshot.exists()) {
-			console.log(snapshot.val());
+			// console.log(snapshot.val());
+			snapshot.forEach((child) => {
+				//var formInput = child.key;
+				console.log(child.key);
+			});
 		} else {
 			console.log("No data available");
 		}
 	})
-	.then(() => {
-
-	})
 	.catch((error) => {
 		console.error(error);
 	});
-	/*get(child(db, `users/${userId}`)).then((snapshot) => {
-	  if (snapshot.exists()) {
-		console.log(snapshot.val());
-	  } else {
-		console.log("No data available");
-	  }
-	})
-	.then(() => {
-		console.log(snapshot.username.val);
-	})
-	.catch((error) => {
-	  console.error(error);
-	});*/
 }
-/*
-function writeMemberData(name, street, city) {
-	userId++;
-	set(ref(db, 'Members/' + userId), {
-			name: name,
-			street: street,
-			city: city
-		})
-		.then(() => {
-			console.log("Data written successfully")
-		})
-		.catch((error) => {
-			console.log(error);
-		})
-}
-
-function getMemberData(userId) {
-	get(child(d, `Members/${userId}`)).then((snapshot) => {
-		if (snapshot.exists()) {
-			console.log(snapshot.val());
-		} else {
-			console.log("No data available");
-		}
-	}).catch((error) => {
-		console.error(error);
-	});
-}
-*/
 })();
 
 /******/ })()
