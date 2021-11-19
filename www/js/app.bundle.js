@@ -27679,7 +27679,7 @@ function writeMemberData(userId, name, email, imageUrl) {
 
 function getMemberData() {
 	const dbRef = (0,firebase_database__WEBPACK_IMPORTED_MODULE_2__.ref)((0,firebase_database__WEBPACK_IMPORTED_MODULE_2__.getDatabase)());
-	(0,firebase_database__WEBPACK_IMPORTED_MODULE_2__.get)((0,firebase_database__WEBPACK_IMPORTED_MODULE_2__.child)(dbRef, 'Members/')).then((snapshot) => {
+	(0,firebase_database__WEBPACK_IMPORTED_MODULE_2__.get)((0,firebase_database__WEBPACK_IMPORTED_MODULE_2__.child)(dbRef, 'Sloebers/')).then((snapshot) => {
 		if (snapshot.exists()) {
 			console.log(snapshot.val());
 		} else {

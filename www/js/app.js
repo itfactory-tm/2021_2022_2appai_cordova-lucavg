@@ -75,7 +75,7 @@ function writeMemberData(userId, name, email, imageUrl) {
 
 function getMemberData() {
 	const dbRef = ref(getDatabase());
-	get(child(dbRef, 'Members/')).then((snapshot) => {
+	get(child(dbRef, 'Sloebers/')).then((snapshot) => {
 		if (snapshot.exists()) {
 			console.log(snapshot.val());
 		} else {
