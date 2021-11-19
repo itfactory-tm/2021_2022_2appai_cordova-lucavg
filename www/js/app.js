@@ -21,7 +21,8 @@ const firebaseConfig = {
 };
 const app = initializeApp(firebaseConfig);
 const db = getDatabase(app);
-let userId = 0;
+localStorage.setItem('sloeber', afdeling);
+let afdeling = localStorage.getItem('afdeling');
 
 $(function () {
 	document.addEventListener("deviceready", onDeviceReady, false);
@@ -75,7 +76,7 @@ function writeMemberData(userId, name, email, imageUrl) {
 
 function getMemberData() {
 	const dbRef = ref(getDatabase());
-	get(child(dbRef, 'Sloebers/')).then((snapshot) => {
+	get(child(dbRef, 'Members/' + afdeling + '/')).then((snapshot) => {
 		if (snapshot.exists()) {
 			console.log(snapshot.val());
 		} else {
