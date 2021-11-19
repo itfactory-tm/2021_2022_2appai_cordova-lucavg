@@ -3,11 +3,12 @@ const webpack = require('webpack');
 
 module.exports = {
     mode: 'development',
-    entry: '/www/js/app.js',
+    entry: ['@babel/polyfill', '/www/js/app.js'],
     output: {
         filename: 'app.bundle.js',
         path: path.resolve(__dirname, 'www/js'),
     },
+    devtool: "source-map",
     module: {
         rules: [{
             test: /\.txt$/,
@@ -23,6 +24,9 @@ module.exports = {
         // (do "npm install process" before running the build)
         new webpack.ProvidePlugin({
             process: 'process/browser',
+        }),
+        new webpack.ProvidePlugin({
+            Buffer: ['buffer', 'Buffer'],
         }),
     ],
     externals: {
@@ -56,6 +60,7 @@ module.exports = {
             vm: require.resolve('vm-browserify'),
             zlib: require.resolve('browserify-zlib'),
             child_process: false,
+            buffer: require.resolve("buffer"),
         },
         modules: [
             path.join(__dirname, "js/helpers"),

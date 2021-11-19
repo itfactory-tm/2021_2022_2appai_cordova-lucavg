@@ -1,1 +1,1 @@
-{"plugins":["cordova-plugin-whitelist","cordova-plugin-firestore","cordova-plugin-webpack"]}
+{"plugins":["cordova-plugin-whitelist","cordova-plugin-firestore","cordova-plugin-androidx"]}

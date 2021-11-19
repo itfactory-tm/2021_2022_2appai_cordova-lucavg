@@ -34,26 +34,33 @@
       "cordova-plugin-androidx": {}
     },
     "platforms": [
-      "android",
-      "browser"
+      "browser",
+      "android"
     ]
   },
   "dependencies": {
+    "@babel/polyfill": "^7.12.1",
     "@fortawesome/fontawesome-free": "^5.15.4",
     "browserify": "^17.0.0",
+    "buffer": "^6.0.3",
     "camelcase": "^6.2.1",
     "console-browserify": "^1.2.0",
     "cordova": "^9.0.0",
     "decamelize": "^6.0.0",
-    "firebase": "^9.4.1",
+    "firebase": "^9.5.0",
     "firebase-admin": "^10.0.0",
+    "hash-stream-validation": "^0.2.4",
+    "inquirer": "^8.2.0",
     "jquery": "^3.6.0",
+    "lib": "^4.3.3",
     "materialize-css": "^1.0.0",
     "net": "^1.0.2",
     "node-fetch": "^2.6.1",
     "node-forge": "^0.10.0",
     "path-browserify": "^1.0.1",
     "require-directory": "^2.1.1",
+    "resolve-from": "^5.0.0",
+    "source-map-loader": "^3.0.0",
     "tunnel-agent": "^0.6.0",
     "url": "^0.11.0",
     "which-module": "^2.0.0",
