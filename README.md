@@ -10,15 +10,13 @@
 
 ## Short description of your app
 
-Voor mijn applicatie in Cordova ga ik een applicatielijst maken waarop ledenlijsten bijgehouden kunnen worden. Via een verbinding met Google Firebase kunnen ledenlijsten 
+Bij het opstarten van de applicatie wordt er uitleg over mezelf gegeven en het doel van de applicatie. Hier is geen interactie tussen de applicatie en de gebruiker.
 
-Na het inloggen krijgt de gebruiker een welkompagina waar hij verwelkomt wordt en informatie krijgt over aankomende evenementen.
-In een volgende tab kunnen ze zich inschrijven voor sportsessies. Hierbij krijgt de gebruiker een overzicht via een kalender waarbij open slots staan waarvoor ze zich kunnen inschrijven. Indien de gebruiker op een tijdblok duwt om zich in te schrijven krijgen ze data te zien zoals de coach, het maximum aantal inschrijvingen en het huidig aantal ingeschreven sporters, alsook de tijdblok (bijvoorbeeld van 10u tot 11u).
+Op de volgende pagina worden de leden van de gekozen afdeling getoond. Hier kan men met behulp van de checkboxes aanduiden welke leden aanwezig zijn en welke afwezig. Helemaal onderaan de pagina staat ook een teller die aantoont hoeveel leden er aanwezig zijn.
 
-In deze tab kan de gebruiker zelf ook een evenement aanmaken voor in de kalender, als de gebruiker daar de rechten voor heeft (bijvoorbeeld als coach).
-In een derde tab krijgen ze hun huidige inschrijvingen te zien. Deze staan chronologisch gerangschikt en wanneer de gebruiker op een inschrijving duwt krijgt deze weer al de data voor die inschrijving te zien.
+De derde pagina is enkel gevuld wanneer een gebruiker ingelogd is via Firebase. Deze tab toont alle leden van de geselecteerde afdeling inclusief de bijhorende adressen.
 
-In een vierde en laatste tab kunnen de gebruikers hun gegevens aanpassen indien ze dit nodig vinden.
+Op de laatste pagina worden alle instellingen voor de applicatie getoond. Men kan kiezen van welke afdeling ze de lijsten willen bekijken, alsook of ze de adreslijsten willen opvragen per lid. Hier kan men zich ook inloggen als de gebruiker is aangeduid als administratief verantwoordelijke van Chiro Vorselaar. Dit is per afdeling 1 leiding en deze logingegevens worden door mij en de volwassen begeleiding van Chiro Vorselaar aangeboden. Indien men zich inlogt als administratief verantwoordelijke dan krijgt men toegang tot extra informatie per lid, zoals bijvoorbeeld de adressen.
 
 ## Plugins used
 
