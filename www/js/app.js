@@ -43,7 +43,7 @@ $(function () {
 		signInOptions: [
 			firebase.auth.EmailAuthProvider.PROVIDER_ID
 		],
-		// Other config options...
+		// Type other config options here...
 	});
 	var uiConfig = {
 		callbacks: {
@@ -68,9 +68,6 @@ $(function () {
 		]
 	};
 	ui.start('#firebaseui-auth-container', uiConfig);
-
-	//apply image to about me page
-	// $("#me").attr("src", MyImage);
 
 	//set value of afdeling selector on settings page
 	switch (localStorage.getItem('afd')) {
