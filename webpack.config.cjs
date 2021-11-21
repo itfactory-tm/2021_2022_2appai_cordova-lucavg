@@ -7,26 +7,23 @@ module.exports = {
     entry: ['@babel/polyfill', '/www/js/app.js'],
     output: {
         filename: 'app.bundle.js',
-        path: path.resolve(__dirname, 'www/outputdir'),
+        path: path.resolve(__dirname, '/www/outputdir'),
+        publicPath: '/',
     },
     devtool: "source-map",
     module: {
         rules: [{
-                test: /\.txt$/,
-                use: 'raw-loader',
-            }, {
-                test: /\.(jpe?g|png|gif|svg)$/i,
+            test: /\.txt$/,
+            use: 'raw-loader',
+        }, {
+            test: /\.(png|jpe?g|gif)$/i,
+            use: [{
                 loader: 'file-loader',
-                options: {
-                    name: '/public/icons/[name].[ext]'
-                },
-            },
-            {
-                test: /.css$/,
-                use: ['style-loader', 'css-loader'],
-            }
-        ],
-
+            }, ]
+        }, {
+            test: /.css$/,
+            use: ['style-loader', 'css-loader'],
+        }],
     },
     plugins: [
         new webpack.ProvidePlugin({

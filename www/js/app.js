@@ -1,5 +1,5 @@
 //imports all the needed data
-import MyImage from '../../resources/me.jpg';
+// import MyImage from '../../resources/me.jpg';
 import {
 	initializeApp
 } from 'firebase/app';
@@ -70,7 +70,7 @@ $(function () {
 	ui.start('#firebaseui-auth-container', uiConfig);
 
 	//apply image to about me page
-	$("#me").attr("src", MyImage);
+	// $("#me").attr("src", MyImage);
 
 	//set value of afdeling selector on settings page
 	switch (localStorage.getItem('afd')) {
