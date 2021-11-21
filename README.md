@@ -10,7 +10,7 @@
 
 ## Short description of your app
 
-Voor mijn applicatie in Cordova ga ik een mobile versie maken van de wodbook website die Crossfit Lividum in Herentals gebruikt. Het is de bedoeling dat gebruikers zich kunnen inloggen in de app met een gebruikersnaam en een wachtwoord. Deze worden opgeslagen in een databank. 
+Voor mijn applicatie in Cordova ga ik een applicatielijst maken waarop ledenlijsten bijgehouden kunnen worden. Via een verbinding met Google Firebase kunnen ledenlijsten 
 
 Na het inloggen krijgt de gebruiker een welkompagina waar hij verwelkomt wordt en informatie krijgt over aankomende evenementen.
 In een volgende tab kunnen ze zich inschrijven voor sportsessies. Hierbij krijgt de gebruiker een overzicht via een kalender waarbij open slots staan waarvoor ze zich kunnen inschrijven. Indien de gebruiker op een tijdblok duwt om zich in te schrijven krijgen ze data te zien zoals de coach, het maximum aantal inschrijvingen en het huidig aantal ingeschreven sporters, alsook de tijdblok (bijvoorbeeld van 10u tot 11u).

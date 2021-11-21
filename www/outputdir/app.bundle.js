@@ -42892,8 +42892,8 @@ $(function () {
 					$('#adresstable')
 					.append($("<tr id='tableheader'></tr>")
 					.append('<th>Naam</th>')
-					.append('<th>Straat</th>')
-					.append('<th>Dorp</th>'));
+					.append('<th>Dorp</th>')
+					.append('<th>Straat</th>'));
 					
 					snapshot.forEach((child) => {
 						const childKeyString = child.key.replace("'", "\'");
