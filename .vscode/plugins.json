@@ -1,1 +1,1 @@
-{"plugins":["cordova-plugin-whitelist","cordova-plugin-firestore","cordova-plugin-androidx"]}
+{"plugins":["cordova-plugin-whitelist","cordova-plugin-firestore","cordova-plugin-androidx","cordova-plugin-vibration","cordova-plugin-buildinfo","cordova-universal-links-plugin","cordova-plugin-browsertab","cordova-plugin-compat","cordova-plugin-inappbrowser","cordova-plugin-customurlscheme","cordova-plugin-androidx-adapter"]}

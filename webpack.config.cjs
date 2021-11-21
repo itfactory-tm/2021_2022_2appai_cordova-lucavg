@@ -1,36 +1,48 @@
 const path = require('path');
 const webpack = require('webpack');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
     mode: 'development',
     entry: ['@babel/polyfill', '/www/js/app.js'],
     output: {
         filename: 'app.bundle.js',
-        path: path.resolve(__dirname, 'www/js'),
+        path: path.resolve(__dirname, 'www/outputdir'),
     },
     devtool: "source-map",
     module: {
         rules: [{
-            test: /\.txt$/,
-            use: 'raw-loader',
-            test: /\.(png|jpe?g|gif)$/i,
-            use: [{
+                test: /\.txt$/,
+                use: 'raw-loader',
+            }, {
+                test: /\.(jpe?g|png|gif|svg)$/i,
                 loader: 'file-loader',
-            }, ],
-        }],
+                options: {
+                    name: '/public/icons/[name].[ext]'
+                },
+            },
+            {
+                test: /.css$/,
+                use: ['style-loader', 'css-loader'],
+            }
+        ],
+
     },
     plugins: [
-        // fix "process is not defined" error:
-        // (do "npm install process" before running the build)
         new webpack.ProvidePlugin({
             process: 'process/browser',
         }),
         new webpack.ProvidePlugin({
             Buffer: ['buffer', 'Buffer'],
         }),
+        new HtmlWebpackPlugin({
+            title: 'Production',
+            template: 'www/index.html',
+        }),
     ],
     externals: {
-        "jquery": "jQuery"
+        "jquery": "jQuery",
+
     },
     resolve: {
         fallback: {
@@ -65,7 +77,7 @@ module.exports = {
         modules: [
             path.join(__dirname, "js/helpers"),
             "node_modules"
-        ]
+        ],
 
     },
 };
