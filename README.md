@@ -4,9 +4,9 @@
 - **Class**: 2APPAI 01
 - **Email**: <a href="mailto:r0849476@student.thomasmore.be">r0849476@student.thomasmore.be</a>
 - **Student number**: r0849476
-- **APK download URL**: ......
+- **APK download URL**: [download!](ledenlijstchirovorselaar.sinners.be/assets/LedenlijstChiroVorselaar.apk)
 
-![Link to your profile photo](../resources/me.jpg)
+![Link to your profile photo](resources/me.jpg)
 
 ## Short description of your app
 
@@ -23,8 +23,26 @@ In een vierde en laatste tab kunnen de gebruikers hun gegevens aanpassen indien 
 ## Plugins used
 
 - [cordova-plugin-whitelist](https://cordova.apache.org/docs/en/latest/reference/cordova-plugin-whitelist/)  
-Used for ...
+De whitelist plugin zorgt ervoor dat een gebruiker gelimiteerd wordt in welke URLs ze kunnen bereiken binnen een webview.
 
+- [cordova-plugin-androidx](https://www.npmjs.com/package/cordova-plugin-androidx)
+- [cordova-plugin-androidx-adapter](https://www.npmjs.com/package/cordova-plugin-androidx-adapter)
+Deze plugins worden gebruikt om libraries in een Cordova/Phonegap project te enablen indien deze androidx gebruiken.
 
-## Tip: GitHub Markdown
-[Basic writing and formatting Markdown syntax](https://docs.github.com/en/github/writing-on-github/basic-writing-and-formatting-syntax)
+- [cordova-plugin-browsertab](https://github.com/google/cordova-plugin-browsertab)
+- [cordova-plugin-inappbrowser](https://cordova.apache.org/docs/en/10.x/reference/cordova-plugin-inappbrowser/)
+- [cordova-universal-links-plugin](https://www.npmjs.com/package/cordova-plugin-universal-links)
+Deze plugins dienen voornamelijk voor het bouwen van de login voor Firebase die ingebouwd is. Het login element is een webview die door deze plugins ingeladen kan worden.
+
+- [cordova-plugin-buildinfo](https://www.npmjs.com/package/cordova-plugin-buildinfo)
+De buildinfo plugin zorgt er voor dat allerlei data over het device beschikbaar zijn vanaf dat de deviceready event wordt afgevuurd wordt.
+
+- [cordova-plugin-compat](https://www.npmjs.com/package/cordova-plugin-compat)
+De compat plugin zorgt ervoor dat backwards compatibility met vroegere versies van Cordova behouden wordt.
+
+- [cordova-plugin-firestore](https://www.npmjs.com/package/cordova-plugin-firestore)
+De firestore plugin is de plugin die het meeste gebruikt wordt in de applicatie. Het zorgt voor een realtime verbinding tussen de app en de cloud waar de data van de applicatie wordt bijgehouden.
+
+- [cordova-plugin-vibration](https://www.npmjs.com/package/cordova-plugin-vibration)
+Deze simpele plugin zorgt voor een vibratie die x aantal seconden kan duren of met een patroon.
+
